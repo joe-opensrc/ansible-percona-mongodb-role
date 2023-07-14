@@ -53,12 +53,12 @@
 - name: Install Dependencies
   ansible.builtin.command: apt-get install -f
 
-- name: Enable psmdb-44 + pbm-backup release
+- name: "Enable {{ mongodb_debian.pdmdb_version }} + pbm-backup release"
   become: yes
   ansible.builtin.command: "{{ item }}"
   loop:
-    - percona-release enable psmdb-44 release
-    - percona-release enable pbm release
+    - percona-release enable {{ mongodb_debian.pdmdb_version }} release
+    - percona-release setup {{ mongodb_debian.pdmdb_version }}
     - apt-get update
 
 - name: Install percona-release
