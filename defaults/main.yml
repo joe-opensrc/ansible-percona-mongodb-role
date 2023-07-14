@@ -22,7 +22,7 @@ mongod_db_path: /data/db
 mongod_binary_url: "https://downloads.percona.com/downloads/percona-distribution-mongodb-LATEST/percona-distribution-mongodb-6.0.3/binary/tarball"
 
 mongodb_debian:
-  pdmdb_version: pdmdb_6.0.3
+  pdmdb_version: pdmdb-6.0.3
 
 mongod_binary_archives:
   - ["{{ mongod_binary_url }}/percona-server-mongodb-6.0.3-2-x86_64.glibc2.17.tar.gz", "{{ mongod_server_path }}", [--strip-components=1]]
