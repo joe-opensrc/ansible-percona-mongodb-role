@@ -11,3 +11,4 @@
 
 - include_tasks: configure.yml
   tags: configure
+  ignore_errors: yes
