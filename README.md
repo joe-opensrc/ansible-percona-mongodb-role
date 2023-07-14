@@ -1,7 +1,9 @@
 Role Name
 =========
 
-Install Percona Server + Backup for MongoDB onto openSUSE / SLES & Debian
+Install Percona Server + Backup for MongoDB onto:
+  openSUSE / SLES 
+  Debian / Ubuntu
 
 Requirements
 ------------
