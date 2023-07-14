@@ -69,8 +69,11 @@
   ansible.builtin.apt:
     update_cache: yes
     package:
-      - percona-server-mongodb
+      - percona-server-mongodb 
+      - percona-server-mongodb-mongos 
       - percona-backup-mongodb
+      - percona-mongodb-mongosh 
+      - percona-server-mongodb-tools
 
 - name: Render out mongod and systemd config
   become: yes
