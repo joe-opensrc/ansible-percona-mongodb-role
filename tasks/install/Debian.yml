@@ -27,6 +27,10 @@
       - lsb-release
       - curl
       - gnupg2
+      # ansible deps:
+      - python3
+      - tzdata
+      - sudo
 
 - name: Set debian package name fact
   ansible.builtin.set_fact:
