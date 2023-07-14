@@ -59,7 +59,6 @@
   loop:
     - percona-release enable {{ mongodb_debian.pdmdb_version }} release
     - percona-release setup {{ mongodb_debian.pdmdb_version }}
-    - apt-get update
 
 - name: Install percona-release
   ansible.builtin.apt:
