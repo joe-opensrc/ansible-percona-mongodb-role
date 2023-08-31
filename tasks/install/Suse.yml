@@ -17,6 +17,7 @@
       - git
       - jq
       - timezone
+      - wget
 
 - name: Report on zypper install
   ansible.builtin.debug:
