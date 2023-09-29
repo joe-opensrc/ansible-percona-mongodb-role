@@ -8,6 +8,8 @@ mongod_ugid: 6001
 
 mongod_root_path: /opt/soft/db/percona/mongodb
 
+mongod_download_path: "{{ mongod_root_path }}/downloads"
+
 mongod_server_path: "{{ mongod_root_path }}/server"
 mongod_server_bin_path: "{{ mongod_server_path }}/bin"
 

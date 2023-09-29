@@ -90,6 +90,7 @@
     mode: 0755
   loop:
     - "{{ mongod_root_path }}"
+    - "{{ mongod_download_path }}"
     - "{{ mongod_server_path }}"
     - "{{ mongod_server_bin_path }}"
     - "{{ mongod_backup_path }}"
@@ -123,7 +124,7 @@
     group: root
     mode: 0640
     url: "{{ item.0 }}"
-    dest: "{{ mongod_root_path }}"
+    dest: "{{ mongod_download_path }}"
   loop: "{{ mongod_binary_archives }}"
 
 # - name: Send Percona MongoDB-Server + MongoDB-Backup binary archives (tgz)
@@ -143,7 +144,7 @@
     owner: root
     group: root
     remote_src: true
-    src: "{{ mongod_root_path }}/{{ item.0 | basename }}"
+    src: "{{ mongod_download_path }}/{{ item.0 | basename }}"
     dest: "{{ item.1 }}"
     extra_opts: "{{ item.2 }}"
   loop: "{{ mongod_binary_archives }}"
