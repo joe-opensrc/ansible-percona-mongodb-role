@@ -109,6 +109,7 @@
     mode: 0755
   loop:
     - "{{ mongod_db_path }}"
+    - "{{ mongod_db_path }}/journal"
     - /var/log/mongodb
     - /run/mongodb
     # last one gets created by systemd service
