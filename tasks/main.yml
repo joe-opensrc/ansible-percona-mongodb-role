@@ -6,8 +6,12 @@
 - include: user_wrangler.yml
   tags: user
 
-- include_tasks: "install/{{ ansible_facts['os_family'] | default('Suse') }}.yml"
+- include_tasks: 
+    file: "install/{{ ansible_facts['os_family'] | default('Suse') }}.yml"
+    apply:
+      tags: install
   tags: install
+    
 
 - include_tasks: 
     file: configure.yml
