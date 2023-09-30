@@ -13,11 +13,11 @@ Group={{ mongod_group }}
 
 ExecStart={{ mongod_server_bin_path }}/mongod -f /etc/mongod.conf  
 
-ExecStartPre=/usr/bin/mkdir -p /var/run/mongodb
-ExecStartPre=/usr/bin/chown {{ mongod_user}}:{{mongod_group}} /var/run/mongodb
-ExecStartPre=/usr/bin/chmod 0755 /var/run/mongodb
+ExecStartPre=/usr/bin/mkdir -p /run/mongodb
+ExecStartPre=/usr/bin/chown {{ mongod_user}}:{{mongod_group}} /run/mongodb
+ExecStartPre=/usr/bin/chmod 0755 /run/mongodb
 PermissionsStartOnly=true
-PIDFile=/var/run/mongodb/mongod.pid
+PIDFile=/run/mongodb/mongod.pid
 Type=forking
 
 # file size

@@ -110,7 +110,7 @@
   loop:
     - "{{ mongod_db_path }}"
     - /var/log/mongodb
-    - /var/run/mongodb
+    - /run/mongodb
     # last one gets created by systemd service
     # last two can be discussed
 
